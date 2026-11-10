@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>התורים שלי היום · הדגמה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/doctor.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-in">
+    <div class="brand"><span class="brand-name">מכבי</span><span class="brand-tag">הדגמה</span><span class="brand-sep"></span><span class="brand-sub">שולחן העבודה של הרופא/ה</span></div>
+    <div class="hero-main">
+      <div>
+        <h1 id="title">התורים שלי היום – ד"ר רונית שפירא</h1>
+        <p class="hero-sub" id="subtitle">רפואת משפחה</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="sTotal">0</b><span>תורים בתור</span></div>
+        <div class="stat urgent"><b id="sUrgent">0</b><span>דחופים להיום</span></div>
+        <div class="stat"><b id="sEm">0</b><span>הופנו לחירום</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="em-strip" id="emStrip" hidden>
+    <span class="em-title"><svg viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg>הופנו לחירום</span>
+    <div class="em-list" id="emList"></div>
+    <span class="em-note">לא נקבע להם תור</span>
+  </section>
+
+  <section class="toolbar">
+    <div class="seg" role="tablist" aria-label="סדר תצוגה">
+      <button id="modeBooking" role="tab">לפי שעת הזמנה</button>
+      <button id="modeUrgency" role="tab" class="on">לפי דחיפות</button>
+    </div>
+    <div class="legend">
+      <span><i class="t1"></i>היום</span><span><i class="t2"></i>תוך 48 שעות</span><span><i class="t3"></i>תוך 3 ימים</span><span><i class="t4"></i>שגרתי</span>
+    </div>
+    <span class="live"><i></i>מתעדכן בזמן אמת</span>
+  </section>
+  <p class="caption" id="caption"></p>
+
+  <section class="table">
+    <div class="thead"><span></span><span>שם</span><span>גיל</span><span>פנייה</span><span>דחיפות</span><span>סוג תור</span><span>מועד</span></div>
+    <div id="rows"></div>
+  </section>
+  <p class="disclaimer">הדגמה בלבד · נתונים בדויים · הכללים להמחשה וייקבעו על ידי הצוות הרפואי של מכבי</p>
+</main>
+<script src="/doctor.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מכבי · הזמנת תור חכמה (הדגמה)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<!-- discreet corner controls, outside the phone -->
+<div class="corner corner-demo">
+  <button id="demoBtn" class="icon-btn" title="תרחישי הדגמה" aria-label="תרחישי הדגמה">
+    <svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L5 19a2 2 0 001.8 3h10.4A2 2 0 0019 19l-5-10V3"/><path d="M7.5 15h9"/></svg>
+  </button>
+  <div id="demoMenu" class="menu" hidden>
+    <div class="menu-title">תרחישי הדגמה</div>
+    <button data-sc="1">כאב בטן מאתמול</button>
+    <button data-sc="2">חידוש מרשם</button>
+    <button data-sc="3">כאב בחזה</button>
+    <button data-sc="4">פריחה מגרדת</button>
+    <hr>
+    <button id="resetBtn" class="danger">איפוס</button>
+    <a href="/doctor" target="_blank" rel="noopener" class="menu-link">מסך הרופא/ה ↗</a>
+  </div>
+</div>
+
+<main class="stage">
+  <div class="phone" id="phone">
+    <div class="notch"></div>
+    <div class="screen" id="screen">
+      <header class="appbar">
+        <div class="brand"><span class="brand-name">מכבי</span><span class="brand-tag">הדגמה</span></div>
+        <button class="profile" id="profileBtn" aria-label="החלפת מבוטח/ת">
+          <span class="avatar" id="avatar"></span>
+          <span class="profile-text"><b id="pName"></b><small id="pMeta"></small></span>
+          <svg class="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </header>
+      <div class="view" id="view"></div>
+      <div class="sheet-wrap" id="sheet" hidden></div>
+      <div class="toast" id="toast" hidden></div>
+    </div>
+  </div>
+  <p class="disclaimer">הדגמה בלבד · נתונים בדויים · הכללים להמחשה וייקבעו על ידי הצוות הרפואי של מכבי</p>
+</main>
+
+<div class="corner corner-status" id="statusDot" title="מצב: תסריט מקומי">
+  <span class="dot" id="dot"></span><span class="dot-label" id="dotLabel">תסריט מקומי</span>
+</div>
+
+<script src="/rules.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
